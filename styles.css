@@ -1,0 +1,46 @@
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif; color: #182745; background: #f5f7fc; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button { font: inherit; cursor: pointer; touch-action: manipulation; }
+button:focus-visible { outline: 3px solid #1644bf; outline-offset: 5px; }
+[hidden] { display: none !important; }
+.page { max-width: 760px; margin: 0 auto; padding: 42px 28px 24px; }
+.header { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+.mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: white; background: #2457df; font: 30px Georgia, serif; }
+h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: .02em; }
+main { background: white; border: 1px solid #e0e6f0; border-radius: 24px; padding: 32px 40px 24px; box-shadow: 0 12px 40px #203d7610; }
+.question-meta { display: flex; align-items: center; justify-content: space-between; color: #596881; font-size: 13px; letter-spacing: .14em; font-weight: 650; }
+#counter { color: #2457df; font-size: 17px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.progress { display: flex; gap: 5px; margin-top: 14px; }
+.progress span { flex: 1; height: 4px; background: #e9edf5; border-radius: 3px; }
+.progress .complete { background: #2457df; }
+.progress .current { background: #95b1ff; }
+.problem-area { padding: 42px 0 38px; text-align: center; }
+.instruction { margin: 0 0 22px; font-size: 14px; color: #64718a; }
+#problem { display: flex; justify-content: center; align-items: center; margin: 0; white-space: nowrap; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(28px, 5.5vw, 50px); font-variant-numeric: lining-nums tabular-nums; }
+#problem:focus, #result-title:focus { outline: none; }
+.radical { display: inline-flex; align-items: center; }
+.radical > span:first-child { font-size: 1.24em; }
+.radicand { border-top: 2px solid currentColor; padding: 4px 3px 0 1px; }
+.equals { padding-left: .2em; }
+.choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.choice { position: relative; min-height: 86px; border: 1.5px solid #dce3ef; border-radius: 13px; background: white; color: #182745; font-size: 28px; font-weight: 550; font-variant-numeric: tabular-nums; padding: 18px 30px; }
+@media (hover: hover) { .choice:hover:not(:disabled) { background: #f2f6ff; border-color: #2457df; } .primary:hover { background: #1745bf; } }
+.choice:disabled { cursor: default; opacity: 1; color: #738098; background: #f8f9fc; }
+.choice.correct:disabled { border-color: #148363; background: #eaf8f1; color: #086347; }
+.choice.wrong:disabled { border-color: #c7404b; background: #fff0f1; color: #a32331; }
+.choice-symbol { position: absolute; right: 10px; top: 8px; font-size: 17px; }
+.response-area { min-height: 118px; text-align: center; padding-top: 21px; }
+#feedback { min-height: 24px; font-size: 16px; font-weight: 650; margin: 0 0 16px; }
+#feedback.correct { color: #086347; }
+#feedback.wrong { color: #a32331; }
+.primary { display: inline-flex; align-items: center; justify-content: center; gap: 32px; border: 0; border-radius: 10px; background: #2457df; color: white; min-height: 50px; min-width: 210px; padding: 12px 24px; font-size: 16px; font-weight: 650; }
+footer { color: #66738a; text-align: center; font-size: 13px; margin-top: 25px; letter-spacing: .07em; }
+.result { padding: 39px 0 44px; text-align: center; }
+.eyebrow { color: #2457df; font-size: 13px; letter-spacing: .15em; font-weight: 650; }
+.result h2 { margin: 24px 0 0; font-size: 21px; }
+.score { margin: 32px 0; font-size: 30px; color: #66738a; font-variant-numeric: tabular-nums; }
+.score strong { color: #2457df; font-size: 100px; font-weight: 650; letter-spacing: -.06em; }
+.result-message { color: #64718a; margin-bottom: 32px; font-size: 15px; }
+@media (max-width: 520px) { .page { padding: 24px 16px; } .header { margin-bottom: 24px; gap: 10px; } h1 { font-size: 18px; } main { padding: 25px 18px 20px; border-radius: 20px; } .problem-area { padding: 38px 0 32px; } .choice { font-size: 24px; min-height: 78px; padding: 18px 22px; } .choices { gap: 10px; } .result h2 { font-size: 18px; } }
+@media (max-width: 360px) { .page { padding: 18px 10px; } main { padding-inline: 12px; } #problem { font-size: 25px; } .choice { font-size: 21px; } }

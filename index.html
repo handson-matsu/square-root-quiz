@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2457df">
+  <meta name="description" content="一の位やおよその大きさから選択肢を絞る、10問の平方根4択チャレンジ。">
+  <title>平方根4択チャレンジ</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232457df'/%3E%3Ctext x='6' y='30' font-size='30' fill='white'%3E√%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header"><span class="mark" aria-hidden="true">√</span><h1>平方根4択チャレンジ</h1></header>
+    <main>
+      <section id="quiz" aria-label="平方根クイズ">
+        <div class="question-meta"><span>QUESTION</span><span id="counter">1 / 10</span></div>
+        <div id="progress" class="progress" aria-hidden="true"></div>
+        <div class="problem-area">
+          <p class="instruction">正の平方根はどれ？</p>
+          <h2 id="problem" tabindex="-1"><span class="radical"><span aria-hidden="true">√</span><span id="radicand" class="radicand"></span></span><span class="equals"> = ?</span></h2>
+        </div>
+        <div id="choices" class="choices" aria-label="4つの選択肢"></div>
+        <div class="response-area">
+          <p id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <button id="next" class="primary" hidden>次の問題 <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+      <section id="result" class="result" aria-labelledby="result-title" hidden>
+        <p class="eyebrow">CHALLENGE COMPLETE</p>
+        <h2 id="result-title" tabindex="-1">10問、おつかれさまでした。</h2>
+        <p class="score"><strong id="score">0</strong><span> / 10</span></p>
+        <p class="result-message">数の特徴で、選択肢を絞ろう。</p>
+        <button id="restart" class="primary">もう一度 <span aria-hidden="true">↻</span></button>
+      </section>
+      <noscript>このアプリを使うにはJavaScriptを有効にしてください。</noscript>
+    </main>
+    <footer>一の位 · 桁数 · およその大きさ</footer>
+  </div>
+</body>
+</html>
