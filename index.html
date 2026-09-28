@@ -15,9 +15,17 @@
   <div class="page">
     <header class="header"><span class="mark" aria-hidden="true">√</span><h1>平方根4択チャレンジ</h1></header>
     <main>
-      <section id="quiz" aria-label="平方根クイズ">
+      <section id="start-screen" class="start-screen" aria-label="チャレンジを始める">
+        <p class="start-rules">一の位・桁数・およその大きさに注目して、<br>4つの選択肢から正の平方根を選びましょう。</p>
+        <ul class="game-facts" aria-label="ルール"><li>全10問</li><li>すべて4択</li><li>1問30秒</li></ul>
+        <p class="start-point">すべてを計算しなくても、<br>数の特徴から選択肢を絞ることができます。</p>
+        <button id="start" class="primary">スタート <span aria-hidden="true">→</span></button>
+        <p id="start-error" role="status" hidden></p>
+      </section>
+      <section id="quiz" aria-label="平方根クイズ" hidden>
         <div class="question-meta"><span>QUESTION</span><span id="counter">1 / 10</span></div>
         <div id="progress" class="progress" aria-hidden="true"></div>
+        <p id="timer" class="timer" role="timer" aria-live="off">残り <span id="seconds">30.0</span> 秒</p>
         <div class="problem-area">
           <p class="instruction">正の平方根はどれ？</p>
           <h2 id="problem" tabindex="-1"><span class="radical"><span aria-hidden="true">√</span><span id="radicand" class="radicand"></span></span><span class="equals"> = ?</span></h2>

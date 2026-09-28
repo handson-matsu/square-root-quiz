@@ -36,6 +36,14 @@ main { background: white; border: 1px solid #e0e6f0; border-radius: 24px; paddin
 #feedback.wrong { color: #a32331; }
 .primary { display: inline-flex; align-items: center; justify-content: center; gap: 32px; border: 0; border-radius: 10px; background: #2457df; color: white; min-height: 50px; min-width: 210px; padding: 12px 24px; font-size: 16px; font-weight: 650; }
 footer { color: #66738a; text-align: center; font-size: 13px; margin-top: 25px; letter-spacing: .07em; }
+.start-screen { padding: 30px 0 42px; text-align: center; }
+.start-rules { margin: 0; font-size: 16px; line-height: 1.9; text-wrap: pretty; }
+.game-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 26px 0; }
+.game-facts li { padding: 8px 12px; border-radius: 8px; color: #2457df; background: #f0f4ff; font-size: 14px; font-weight: 650; }
+.start-point { color: #64718a; font-size: 14px; line-height: 1.9; margin: 0 0 32px; }
+#start-error { color: #a32331; font-size: 14px; margin: 20px 0 0; }
+.timer { margin: 16px 0 0; text-align: right; color: #596881; font-size: 18px; font-variant-numeric: tabular-nums; }
+.timer.is-low { color: #a32331; font-weight: 650; }
 .result { padding: 39px 0 44px; text-align: center; }
 .eyebrow { color: #2457df; font-size: 13px; letter-spacing: .15em; font-weight: 650; }
 .result h2 { margin: 24px 0 0; font-size: 21px; }
